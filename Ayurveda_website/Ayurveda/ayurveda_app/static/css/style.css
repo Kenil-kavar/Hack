@@ -1,0 +1,621 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    background:linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(/static/img/mainImg.jpeg);
+    background-position:center;
+    background-size:cover;
+    height: 109vh;
+
+}
+
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin:auto;
+
+}
+.icon{
+    width: 100px;
+    float: left;
+    height: 70px;
+    margin-top: auto;
+   
+}
+.logo{
+    color: #2ae919;
+    font-size: 35px;
+    font-family: Arial;
+    
+    padding-top: auto;
+}
+.menu{
+     width:auto;
+     float: left;
+     height:auto;
+
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 600px;
+}
+ul li{
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 27px;
+    font-size: 15px;
+
+
+}
+ul li a{
+    text-decoration: non;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li  :hover{
+    color: #2ae919;
+
+ 
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: rgb(2, 40, 2);
+    border: 2px solid rgb(2, 22, 5);
+    margin-top: 13px;
+    color: #041d0a;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #efebeb;
+    position: relative;
+}
+.content.par{
+    padding-left: 30px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    
+}
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+
+}
+
+
+.content.cn.a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+}
+.cn:hover{
+    background-color: #fff;
+}
+.content span{
+    color: #2ae919;
+    font-size: 60px;
+}
+.form{
+    width: 250px;
+    height: 380;
+    background: linear-gradient(to top, r);
+}
+.button-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 100px;
+}
+
+
+.button {
+    background-color: #2ae919;
+    color: rgb(236, 232, 232);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.button:last-child {
+    margin-right: 0;
+}
+.button:hover{
+    color: #0d1908;
+}
+.faq-container-heading{
+ color: #2ae919;
+ margin-top: 100px;
+ margin-bottom: 50px;
+ text-align: center;
+}
+.faq-container {
+        max-width: auto;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    
+.faq-question {
+        margin-left:350px;
+        margin-bottom: 20px;
+        max-width: 800px;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        position: relative; 
+    }
+    
+.faq-question::after {
+        content: "\25BE"; 
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+.faq-answer {
+        display: none;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    
+   
+    .faq-question.active .faq-answer {
+        display: block;
+    }
+  
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.faq-question {
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative; 
+}
+
+.faq-question::after {
+    content: "\25BE"; 
+    position: absolute;
+    right: 10px;
+    top: 50%; 
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+}
+
+
+.faq-question.active .faq-answer {
+    display: block;
+}
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.faq-question::after {
+    content: "\25BE";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer; 
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+}
+
+.faq-question.active .faq-answer {
+    display: block;
+}
+
+/* About page */
+
+
+
+.about .heading h1{
+    color: #2ae919;
+    font-size: 55px;
+    text-align:center;
+    margin-top:35px;
+}
+.about .container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 90%;
+    margin:65px auto;
+
+}
+.about .content{
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation:fadeInUp 2s ease;
+
+}
+
+.about .content p{
+
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom:40px;
+    color:#fff;
+    
+}
+.about .image{
+    flex: 1;
+    width: 600px;
+    margin: auto;
+    animation:fadeInRight 2s ease;
+
+
+}
+
+.about img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about .btn_about{
+    background-color: #2ae919;
+    color: rgb(236, 232, 232);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    
+}
+.about .btn_about a{
+   text-decoration: none;
+    color: white;
+}
+
+.btn_about:hover{
+    color: #0d1908;
+}
+/* Contact us page */
+.contactus{
+    position: relative;
+    min-height: 100vh;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.contactus .contact{
+    max-width: 800px;
+    text-align: center;
+}
+.contactus .contact h2{
+    align-items: center;
+}
+.contactus .contact p{
+font-weight: 300;
+color: #fff;
+}
+
+
+.contactus .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.contactus .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.contactus .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contactus .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60%;
+    font-size: 22px;
+   color: #096700;;
+    
+}
+
+.contactus .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactus .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #2ae919;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background:#fff
+
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #2ae919;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0;
+    border: none;
+    border-bottom: 2px solid rgb(125, 118, 118);
+    resize: none;
+   
+}
+
+.contactForm .inputBox span{
+    position:absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox input:valid ~ span
+{
+    color:  #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+
+}
+
+@media (max-width: 991px)
+{
+    .contact
+    {
+        padding:50px;
+    }
+    .contactus .container{
+        flex-direction: column;
+    }
+    .contactus .container .contactInfo
+    {
+       margin-bottom: 40px;
+    
+    }
+    .contactus .container .contactInfo{
+        width: 100%;
+    }
+}
+
+/* practitioner */
+
+
+.formulation body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+ header {
+    background-color: #2ae919;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+ h1 {
+    font-size: 32px;
+}
+
+ h2 {
+    font-size: 24px;
+    color: #2ae919;
+}
+
+ p {
+    margin-bottom: 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#disease-input {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #2ae919;
+    margin-bottom: 10px;
+}
+
+#search-button {
+    background-color: #2ae919;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #f1f3f1;
+}
+
+#formulation-result {
+    font-size: 18px;
+    color: #2ae919;
+    margin-top: 50px;
+}
+#formulation-output {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#formulation-output h2 {
+    font-size: 24px;
+    color: #2ae919;
+    margin-bottom: 10px;
+}
+
+#formulation-result {
+    font-size: 18px;
+    color: #2ae919;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 768px){
+    .about .heading h1{
+        font: 45px;
+        margin-top: 30px;
+
+    }
+    .about{
+        margin:0px;
+
+    }
+    .about .container{
+        width: 100%;
+        flex-direction: column;
+        margin:0px;
+        padding:0px 40px;
+    }
+    .about .content{
+        width: 100%;
+        margin:35px 0px;
+    }
+    .about .content p{
+        font-size:18px;
+        margin-bottom: 20px;
+    }
+    .about .btn_about{
+        font-size:16px;
+        padding:8px 16px;
+    }
+    .about .image{
+        width:100%;
+    }
+}
+
+@keyframes fadeInUp{
+    0%{
+        opacity:0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
+    }
+   
+}
+
+@keyframes fadeInRight{
+    0%{
+        opacity:0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
+    }
+   
+}

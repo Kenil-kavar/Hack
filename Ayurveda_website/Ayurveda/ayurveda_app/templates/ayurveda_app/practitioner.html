@@ -1,0 +1,43 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <title>Ayurveda website</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+   <body>
+     <div class="practitioner">
+       <div class="navbar">
+         <div>
+           <div class="icon">
+             <h2 class="logo">Ayurveda</h2>
+           </div>
+           <div >
+            <ul>
+              <li><a href="{% url 'index' %}">HOME</a></li>
+              <li><a href="{% url 'aboutus' %}">ABOUT</a></li>
+              <li><a href="{% url 'contactus' %}">CONTACT</a></li>
+              <li><a href="{% url 'faq' %}">FAQ</a></li>
+            </ul>
+         </div>
+         </div>
+       </div>
+      
+
+       <section class="formulation">
+           <h2>Get Formulation Recommendations</h2>
+           <p>Enter the disease name to receive a formulation recommendation:</p>
+           <input type="text" id="disease-input" placeholder="Enter Disease Name">
+           <button id="search-button">Search</button>
+           <div id="formulation-result"></div>
+       </section>
+       <section id="formulation-output" class="hidden">
+           <h2>Formulation Recommendation</h2>
+           <div id="formulation-result"></div>
+     </div>
+      <p>{{resutl}}</p>
+   </body>
+ </html>
+ 

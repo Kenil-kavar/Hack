@@ -1,0 +1,55 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ayurveda website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <div class="main">
+        < <div class="about" id="about-us">
+
+            <div class="navbar">
+                <div>
+                    <div class="icon">
+                        <h2 class="logo">Ayurveda</h2>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="{% url 'index' %}">HOME</a></li>
+                            <li><a href="{% url 'aboutus' %}">ABOUT</a></li>
+                            <li><a href="{% url 'contactus' %}">CONTACT</a></li>
+                            <li><a href="{% url 'faq' %}">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <div class="heading">
+                        <h1>About us</h1>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est non unde optio, minus quis natus
+                        provident animi et id ducimus voluptatibus, at sequi sunt velit, maxime ad cumque dolore veniam.
+                    </p>
+                    <button class="btn_about">
+                        <a href="{% url 'faq' %}" style="text-decoration: none; color: white;">Learn More</a>
+                    </button>
+
+                </div>
+                <div class="image">
+                    <img src="{% static 'img/aboutimg.jpg' %}" alt="">
+                </div>
+            </div>
+            <br /><br /><br /><br />
+    </div>
+    </div>
+</body>
+
+</html>

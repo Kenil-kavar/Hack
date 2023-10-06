@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ayurveda website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div>
+          <div class="icon">
+            <h2 class="logo">Ayurveda</h2>
+          </div>
+          <div >
+          <ul>
+            <li><a href="{% url 'index' %}">HOME</a></li>
+            <li><a href="{% url 'aboutus' %}">ABOUT</a></li>
+            <li><a href="{% url 'contactus' %}">CONTACT</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div style="align-items: center center;">
+      <div class="faq-container-heading">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+    
+        <div class="faq-question">
+            <h2>What is Ayurveda?</h2>
+            <div class="faq-answer">
+                <p>Ayurveda is an ancient system of natural healing that originated in India. It focuses on achieving and maintaining a balance of the body, mind, and spirit to promote overall health and well-being.</p>
+            </div>
+        </div>
+    
+        <div class="faq-question">
+            <h2>How Does Our Formulation Recommendation System Work?</h2>
+            <div class="faq-answer">
+                <p>Our system utilizes advanced data analysis and Ayurvedic principles to assess patient data. It then provides personalized recommendations for Ayurvedic formulations and remedies tailored to the patient's specific health condition.</p>
+            </div>
+        </div>
+        <div class="faq-question">
+            <h2>How Can Patients Use Your System?</h2>
+            <div class="faq-answer">
+                <p>Patients can input data to discover their potential health conditions.</p>
+            </div>
+        </div>
+            <div class="faq-question">
+                <h2> How Do Practitioners Get Formulations Based on Disease Name?</h2>
+                <div class="faq-answer">
+                    <p> Practitioners simply provide the disease name, and our system generates the relevant formulations for them to use in treatment.</p>
+                </div>
+                
+        </div>
+        <div class="faq-question">
+            <h2>Can I Trust the Predictions Made by Your System?</h2>
+            <div class="faq-answer">
+                <p>Our system is designed based on Ayurvedic knowledge and modern data analysis techniques. While it can provide valuable insights, it is not a substitute for professional medical advice. Always consult with a healthcare practitioner for accurate diagnoses and treatment.</p>
+            </div>
+        </div>
+    </div>    
+    </div>
+  </body>
+</html>

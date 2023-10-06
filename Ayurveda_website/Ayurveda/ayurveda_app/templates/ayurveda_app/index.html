@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ayurveda website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div>
+          <div class="icon">
+            <h2 class="logo">Ayurveda</h2>
+          </div>
+          <div >
+          <ul>
+            <li><a href="{% url 'index' %}">HOME</a></li>
+            <li><a href="{% url 'aboutus' %}">ABOUT</a></li>
+            <li><a href="{% url 'contactus' %}">CONTACT</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>
+          Ayurveda Unveiled: <br /><span>Empowering Patients and</span>
+          <br />Practitioners for Holistic Health
+        </h1>
+        <p class="par">
+          "Discover the ancient wisdom of Ayurveda for disease prediction and
+          personalized formulation, unlocking the secrets to your optimal health
+        </p>
+      </div>
+      <div class="button-container">
+        <a href="{% url 'patient' %}"><button class="button">Patient</button></a>
+        <a href="{% url 'practitioner' %}"><button class="button">Practitioner</button></a>
+      </div>
+    </div>
+  </body>
+</html>

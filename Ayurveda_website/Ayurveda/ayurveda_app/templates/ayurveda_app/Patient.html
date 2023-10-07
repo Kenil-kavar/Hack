@@ -1,4 +1,4 @@
-{% load static %}
+{% comment %} {% load static %}
 
 
 <!DOCTYPE html>
@@ -18,6 +18,12 @@
     </div>
     <div class="Disease-predictor">
         <h2>Know Your Disease</h2>
+        
+        
+        
+        
+        
+        
         <form method="post" action="{% url 'patient' %}">
             {% csrf_token %}
             <div class="search-box">
@@ -36,4 +42,74 @@
 </body>
 </html>
 
+ {% endcomment %}
+ {% load static %}
 
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+     <script src="{% static 'js/script.js' %}"></script>
+     <title>About Us</title>
+   </head>
+   <body>
+     <div class="navbar">
+         <div>
+             <div class="icon">
+                 <h2 class="logo">Ayurveda</h2>
+             </div>
+             <div>
+                 <ul>
+                     <li><a href="{% url 'index' %}">HOME</a></li>
+                     <li><a href="{% url 'aboutus' %}">ABOUT</a></li>
+                     <li><a href="{% url 'contactus' %}">CONTACT</a></li>
+                     <li><a href="{% url 'learn' %}">Learn</a></li>
+                     <li><a href="{% url 'faq' %}">FAQ</a></li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+     <div class="patient">
+       <div class="container">
+         <div class="content">
+           <div class="heading">
+             <h1>What is Prakriti?</h1>
+           </div>
+           <p>
+             Prakriti in Ayurveda is an individual's unique constitution, determined by three doshas: Vata, Pitta, and Kapha (air, fire, and water). Understanding it guides personalized healthcare, disease susceptibility, diet, and treatment for holistic well-being.
+           </p>
+           <p>
+             Learn more about your Prakriti by using our
+             <a href="{% url 'prakriti' %}">Know Your Dosha</a> tool.
+           </p>
+         </div>
+         <div class="image">
+           <img src="{% static 'img/prakriti.jpg' %}" alt="" />
+         </div>
+       </div>
+       <div class="disease">
+         <div class="center-content">
+             <h2>Know Your Disease</h2>
+             <br/>
+             <br/>
+             <div class="disease-search">
+                 <form method="post" action="{% url 'patient' %}">
+                    {% csrf_token %}
+                    <div class="search-box">
+                        <label for="symptoms">Enter Symptoms:</label>
+                        <input style="width:80%" type="text" name="symptoms" id="disease-input" placeholder="E.g., Fever, Headache, Cough">
+                    </div>
+                    <div class="search-box">
+                        <input  id="search-button" type="submit" value="Search">
+                    </div>
+                </form>
+             </div>
+           
+     </div>
+     
+     </div>
+   </body>
+ </html>
+ 

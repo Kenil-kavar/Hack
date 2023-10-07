@@ -12,261 +12,152 @@
    
 </head>
 <body>
-    <div class="container">
+    <form action="{% url 'result'%}" method="post">
+        {% csrf_token %}
+       <div class="container">
         <h1>Prakriti Predictor</h1>
         <form>
             <div>
                 <div style="width:50%">
-            <label for="bodySize">Body Size:</label>
-            <select id="bodySize">
-                <option value="Slim">Slim</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-
-            <label for="bodySize">Body Size:</label>
+<label for="bodySize">Body Size:</label>
 <select id="bodySize">
-    <option value="Slim">Slim</option>
-    <option value="Medium">Medium</option>
-    <option value="Large">Large</option>
+    <option value="0">Slim</option>
+    <option value="1">Medium</option>
+    <option value="2">Large</option>
 </select>
 
 <label for="bodyWeight">Body Weight:</label>
 <select id="bodyWeight">
-    <option value="Low">Low, has difficulty in putting on weight</option>
-    <option value="Medium">Medium, can gain & lose weight easily</option>
-    <option value="Overweight">Overweight, Difficult to lose weight</option>
+    <option name="bodyWeight" value="0">Low, has difficulty in putting on weight</option>
+    <option name="bodyWeight" value="1">Medium, can gain & lose weight easily</option>
+    <option name="bodyWeight" value="2">Overweight, Difficult to lose weight</option>
 </select>
 
 <label for="height">Height:</label>
 <select id="height">
-    <option value="TallShort">Tall or short</option>
-    <option value="Average">Average</option>
-    <option value="ThinSturdy">Thin & sturdy / short & stocky</option>
+    <option name="height" value="0">Tall or short</option>
+    <option name="height"  value="1">Average</option>
+    <option name="height" value="2">Thin & sturdy / short & stocky</option>
 </select><label for="boneStructure">Bone Structure:</label>
 <select id="boneStructure">
-    <option value="Light">Light, small bones, Prominent joints</option>
-    <option value="MediumBone">Medium bone structure</option>
-    <option value="LargeBone">Large, broad shoulders, Heavy bone structure</option>
+    <option name="bonneStructure" value="0">Light, small bones, Prominent joints</option>
+    <option name="bonneStructure" value="1">Medium bone structure</option>
+    <option name="bonneStructure" value="2">Large, broad shoulders, Heavy bone structure</option>
 </select>
 
 <label for="complexion">Complexion:</label>
 <select id="complexion">
-    <option value="Dark">Dark complexion, Tans easily</option>
-    <option value="Fair">Fair skin, sun burns easily</option>
-    <option value="White">White, pale, tans evenly</option>
+    <option name="complexion" value="0">Dark complexion, Tans easily</option>
+    <option name="complexion" value="1">Fair skin, sun burns easily</option>
+    <option name="complexion "value="2">White, pale, tans evenly</option>
 </select>
 
 <label for="generalFeelOfSkin">General feel of skin:</label>
 <select id="generalFeelOfSkin">
-    <option value="DryCool">Dry, cool</option>
-    <option value="SmoothOily">Smooth, Oily T-zone</option>
-    <option value="OilyCold">Oily, Cold</option>
+    <option name="generalFeelOfSkin" value="0">Dry, cool</option>
+    <option name="generalFeelOfSkin" value="1">Smooth, Oily T-zone</option>
+    <option  name="generalFeelOfSkin" value="2">Oily, Cold</option>
 </select>
 
 <label for="textureOfSkin">Texture of Skin:</label>
 <select id="textureOfSkin">
-    <option value="DryPigmentation">Dry, pigmentation and aging</option>
-    <option value="FrecklesMoles">Freckles, many moles, redness, rashes and acne</option>
-    <option value="SoftGlowing">Soft, glowing and youthful</option>
+    <option name="textureOfSkin"  value="0">Dry, pigmentation and aging</option>
+    <option name="textureOfSkin"  value="1">Freckles, many moles, redness, rashes and acne</option>
+    <option name="textureOfSkin"  value="2">Soft, glowing and youthful</option>
 </select>
 
 <label for="hairColor">Hair Color:</label>
 <select id="hairColor">
-    <option value="Dull">Dull, black, brown</option>
-    <option value="RedLightBrown">Red, light brown, yellow</option>
-    <option value="BrownHair">Brown</option>
+    <option name="hairColor" value="0">Dull, black, brown</option>
+    <option name="hairColor" value="1">Red, light brown, yellow</option>
+    <option name="hairColor" value="2">Brown</option>
 </select>
 
 <label for="appearanceOfHair">Appearance of Hair:</label>
 <select id="appearanceOfHair">
-    <option value="DryKnotted">Dry, Black Knotted, Brittle</option>
-    <option value="StraightOily">Straight, Oily</option>
-    <option value="ThickCurly">Thick, Curly</option>
+    <option name="appearanceOfHair" value="0">Dry, Black Knotted, Brittle</option>
+    <option name="appearanceOfHair" value="1">Straight, Oily</option>
+    <option name="appearanceOfHair" value="2">Thick, Curly</option>
 </select>
 
 <label for="shapeOfFace">Shape of face:</label>
 <select id="shapeOfFace">
-    <option value="LongAngularThin">Long, angular, Thin</option>
-    <option value="HeartShaped">Heart-shaped, pointed chin</option>
-    <option value="LargeRoundFull">Large, round, Full</option>
+    <option name="shapeOfFace" value="0">Long, angular, Thin</option>
+    <option name="shapeOfFace" value="1">Heart-shaped, pointed chin</option>
+    <option name="shapeOfFace" value="2">Large, round, Full</option>
 </select>
 
 <label for="eyes">Eyes:</label>
 <select id="eyes">
-    <option value="SmallActive">Small, active, darting, dark eyes</option>
-    <option value="MediumSized">Medium sized, penetrating, light sensitive eyes</option>
-    <option value="BigRound">Big, round, beautiful glowing eyes</option>
+    <option name="eyes"  value="0">Small, active, darting, dark eyes</option>
+    <option name="eyes" value="1">Medium sized, penetrating, light sensitive eyes</option>
+    <option name="eyes" value="2">Big, round, beautiful glowing eyes</option>
 </select>
 
 <label for="eyelashes">Eyelashes:</label>
 <select id="eyelashes">
-    <option value="Scanty">Scanty eye lashes</option>
-    <option value="Moderate">Moderate eye lashes</option>
-    <option value="ThickFused">Thick / Fused eye lashes</option>
+    <option name="eyelashes" value="0">Scanty eye lashes</option>
+    <option name="eyelashes" value="1">Moderate eye lashes</option>
+    <option name="eyelashes" value="2">Thick / Fused eye lashes</option>
 </select>
 
 <label for="blinkingOfEyes">Blinking of Eyes:</label>
 <select id="blinkingOfEyes">
-    <option value="ExcessiveBlinking">Excessive Blinking</option>
-    <option value="ModerateBlinking">Moderate blinking</option>
-    <option value="StableBlinking">More or less stable</option>
+    <option name="blinkingofEyes" value="0">Excessive Blinking</option>
+    <option name="blinkingofEyes" value="1">Moderate blinking</option>
+    <option name="blinkingofEyes" value="2">More or less stable</option>
 </select>
 
 <label for="cheeks">Cheeks:</label>
 <select id="cheeks">
-    <option value="WrinkledSunken">Wrinkled, Sunken</option>
-    <option value="SmoothFlat">Smooth, Flat</option>
-    <option value="RoundedPlump">Rounded, Plump</option>
+    <option name="cheeks" value="0">Wrinkled, Sunken</option>
+    <option name="cheeks" value="1">Smooth, Flat</option>
+    <option name="cheeks" value="2">Rounded, Plump</option>
 </select>
 
 <label for="nose">Nose:</label>
 <select id="nose">
-    <option value="CrookedNarrow">Crooked, narrow, Small</option>
-    <option value="PointedAverage">Pointed, Average</option>
-    <option value="RoundedLarge">Rounded, Large open nostrils</option>
+    <option name="nose" value="0">Crooked, narrow, Small</option>
+    <option name="nose"  value="1">Pointed, Average</option>
+    <option name="nose"  value="2">Rounded, Large open nostrils</option>
 </select>
 
 <label for="teethAndGums">Teeth and gums:</label>
 <select id="teethAndGums">
-    <option value="IrregularProtruding">Irregular, protruding teeth, Receding gums</option>
-    <option value="MediumSizedTeeth">Medium sized teeth, Reddish gums</option>
-    <option value="BigWhiteTeeth">Big, white, strong teeth, Hearty gums</option>
+    <option name="teethAndGums" value="0">Irregular, protruding teeth, Receding gums</option>
+    <option  name="teethAndGums" value="1">Medium sized teeth, Reddish gums</option>
+    <option  name="teethAndGums" value="2">Big, white, strong teeth, Hearty gums</option>
 </select>
 
 <label for="lips">Lips:</label>
 <select id="lips">
-    <option value="TightThinDry">Tight, thin, dry lips which chaps easily</option>
-    <option value="LipsSoftMedium">Lips are soft, medium-sized</option>
-    <option value="LipsLargeSoftPink">Lips are large, soft, pink & full</option>
+    <option name="lips" value="0">Tight, thin, dry lips which chaps easily</option>
+    <option name="lips" value="1">Lips are soft, medium-sized</option>
+    <option name="lips" value="2">Lips are large, soft, pink & full</option>
 </select>
 </div>
 <div style="width:50%">
 
 <label for="nails">Nails:</label>
 <select id="nails">
-    <option value="Blackish">Blackish, Small, Brittle</option>
-    <option value="Rdish ">Redish, Small</option>
-    <option value="LargeBone">Pinkish, Big, Smooth</option>
+    <option  name="nails" value="0">Blackish, Small, Brittle</option>
+    <option  name="nails" value="1 ">Redish, Small</option>
+    <option name="nails" value="2">Pinkish, Big, Smooth</option>
 </select>
     
 
-<label for="boneStructure">Bone Structure:</label>
-<select id="boneStructure">
-    <option value="Light">Light, small bones, Prominent joints</option>
-    <option value="MediumBone">Medium bone structure</option>
-    <option value="LargeBone">Large, broad shoulders, Heavy bone structure</option>
-</select>
-
-<label for="complexion">Complexion:</label>
-<select id="complexion">
-    <option value="Dark">Dark complexion, Tans easily</option>
-    <option value="Fair">Fair skin, sun burns easily</option>
-    <option value="White">White, pale, tans evenly</option>
-</select>
-
-<label for="generalFeelOfSkin">General feel of skin:</label>
-<select id="generalFeelOfSkin">
-    <option value="DryCool">Dry, cool</option>
-    <option value="SmoothOily">Smooth, Oily T-zone</option>
-    <option value="OilyCold">Oily, Cold</option>
-</select>
-
-<label for="textureOfSkin">Texture of Skin:</label>
-<select id="textureOfSkin">
-    <option value="DryPigmentation">Dry, pigmentation and aging</option>
-    <option value="FrecklesMoles">Freckles, many moles, redness, rashes and acne</option>
-    <option value="SoftGlowing">Soft, glowing and youthful</option>
-</select>
-
-<label for="hairColor">Hair Color:</label>
-<select id="hairColor">
-    <option value="Dull">Dull, black, brown</option>
-    <option value="RedLightBrown">Red, light brown, yellow</option>
-    <option value="BrownHair">Brown</option>
-</select>
-
-<label for="appearanceOfHair">Appearance of Hair:</label>
-<select id="appearanceOfHair">
-    <option value="DryKnotted">Dry, Black Knotted, Brittle</option>
-    <option value="StraightOily">Straight, Oily</option>
-    <option value="ThickCurly">Thick, Curly</option>
-</select>
-<label for="shapeOfFace">Shape of face:</label>
-<select id="shapeOfFace">
-    <option value="LongAngularThin">Long, angular, Thin</option>
-    <option value="HeartShaped">Heart-shaped, pointed chin</option>
-    <option value="LargeRoundFull">Large, round, Full</option>
-</select>
-
-<label for="eyes">Eyes:</label>
-<select id="eyes">
-    <option value="SmallActive">Small, active, darting, dark eyes</option>
-    <option value="MediumSized">Medium sized, penetrating, light sensitive eyes</option>
-    <option value="BigRound">Big, round, beautiful glowing eyes</option>
-</select>
-
-<label for="eyelashes">Eyelashes:</label>
-<select id="eyelashes">
-    <option value="Scanty">Scanty eye lashes</option>
-    <option value="Moderate">Moderate eye lashes</option>
-    <option value="ThickFused">Thick / Fused eye lashes</option>
-</select>
-
-<label for="blinkingOfEyes">Blinking of Eyes:</label>
-<select id="blinkingOfEyes">
-    <option value="ExcessiveBlinking">Excessive Blinking</option>
-    <option value="ModerateBlinking">Moderate blinking</option>
-    <option value="StableBlinking">More or less stable</option>
-</select>
-
-<label for="cheeks">Cheeks:</label>
-<select id="cheeks">
-    <option value="WrinkledSunken">Wrinkled, Sunken</option>
-    <option value="SmoothFlat">Smooth, Flat</option>
-    <option value="RoundedPlump">Rounded, Plump</option>
-</select>
-
-<label for="nose">Nose:</label>
-<select id="nose">
-    <option value="CrookedNarrow">Crooked, narrow, Small</option>
-    <option value="PointedAverage">Pointed, Average</option>
-    <option value="RoundedLarge">Rounded, Large open nostrils</option>
-</select>
-
-<label for="teethAndGums">Teeth and gums:</label>
-<select id="teethAndGums">
-    <option value="IrregularProtruding">Irregular, protruding teeth, Receding gums</option>
-    <option value="MediumSizedTeeth">Medium sized teeth, Reddish gums</option>
-    <option value="BigWhiteTeeth">Big, white, strong teeth, Hearty gums</option>
-</select>
-
-<label for="lips">Lips:</label>
-<select id="lips">
-    <option value="TightThinDry">Tight, thin, dry lips which chaps easily</option>
-    <option value="LipsSoftMedium">Lips are soft, medium-sized</option>
-    <option value="LipsLargeSoftPink">Lips are large, soft, pink & full</option>
-</select>
-
-<label for="nails">Nails:</label>
-<select id="nails">
-    <option value="DryRoughBrittle">Dry, Rough, Brittle, Break Easily</option>
-    <option value="SharpFlexiblePink">Sharp, Flexible, Pink, Lustrous</option>
-    <option value="ThickOilySmooth">Thick, Oily, Smooth, Polished</option>
-</select>
-
 <label for="appetite">Appetite:</label>
 <select id="appetite">
-    <option value="IrregularScanty">Irregular, Scanty</option>
-    <option value="StrongUnbearable">Strong, Unbearable</option>
-    <option value="SlowButSteady">Slow but Steady</option>
+    <option name="appetite" value="0">Irregular, Scanty</option>
+    <option name="appetite" value="1">Strong, Unbearable</option>
+    <option name="appetite" value="2">Slow but Steady</option>
 </select>
 
 <label for="likingTastes">Liking tastes:</label>
 <select id="likingTastes">
-    <option value="SweetSourSalty">Sweet / Sour / Salty</option>
-    <option value="SweetBitterAstringent">Sweet / Bitter Astringent</option>
-    <option value="PungentBitterAstringent">Pungent / Bitter / Astringent</option>
+    <option name="likingTastes"  value="0">Sweet / Sour / Salty</option>
+    <option name="likingTastes"  value="1">Sweet / Bitter Astringent</option>
+    <option name="likingTastes"  value="2">Pungent / Bitter / Astringent</option>
 </select>
 
 

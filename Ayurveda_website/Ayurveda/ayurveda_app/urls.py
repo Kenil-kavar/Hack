@@ -10,7 +10,7 @@ urlpatterns = [
     path('Patient/',views.patient,name='patient'),
     path('prakriti/',views.prakriti,name='prakriti'),
     path('Result/',views.result,name='result'),
-
+    path('learn/',views.learn,name='learn'),
 
 
 ]

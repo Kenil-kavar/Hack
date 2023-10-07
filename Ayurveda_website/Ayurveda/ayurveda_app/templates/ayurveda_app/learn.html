@@ -1,0 +1,80 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+        <div class="navbar">
+            <div>
+                <div class="icon">
+                    <h2 class="logo">Ayurveda</h2>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="{% url 'index' %}">HOME</a></li>
+                        <li><a href="{% url 'aboutus' %}">ABOUT</a></li>
+                        <li><a href="{% url 'contactus' %}">CONTACT</a></li>
+                        <li><a href="{% url 'learn' %}">Learn</a></li>
+                        <li><a href="{% url 'faq' %}">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <h1 class="learn-page-title">How Ayurveda Herbs Works</h1>
+    <div class="timeline">
+       
+        
+        <div class="container left-container">
+            <img src="{% static 'img/aboutimg.jpg' %}" alt="">
+            <div class="texbox">
+                <h2>Assessment</h2>
+                <p> Identify Dosha imbalances.</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="{% static 'img/aboutimg.jpg' %}" alt="">
+            <div class="texbox">
+                <h2>Selection</h2>
+                <p>Choose specific herbs based on imbalances.k</p>
+                <span class="right-container-arrow"></span>
+
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="{% static 'img/aboutimg.jpg' %}" alt="">
+            <div class="texbox">
+                <h2>Balancing</h2>
+                <p>Herbs pacify or balance Doshas</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="{% static 'img/aboutimg.jpg' %}" alt="">
+            <div class="texbox">
+                <h2>Customization</h2>
+            
+                <p>Create personalized herbal formulations</p>
+                <span class="right-container-arrow"></span>
+
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="{% static 'img/aboutimg.jpg' %}" alt="">
+            <div class="texbox">
+                <h2>Usage and Monitoring</h2>
+                <p>Regularly use herbs, monitor progress</p>
+                <span class="left-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

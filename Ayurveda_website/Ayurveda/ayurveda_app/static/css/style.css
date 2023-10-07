@@ -14,7 +14,6 @@
 
 }
 
-
 .navbar{
     width: 1200px;
     height: 75px;
@@ -57,7 +56,7 @@ ul li{
 
 }
 ul li a{
-    text-decoration: non;
+    text-decoration: none;
     color: white;
     font-family: Arial;
     font-weight: bold;
@@ -70,7 +69,7 @@ ul li  :hover{
  
 }
 
-.btn{
+.btn{ 
     width: 100px;
     height: 40px;
     background: rgb(2, 40, 2);
@@ -82,6 +81,7 @@ ul li  :hover{
     border-bottom-right-radius: 5px;
 
 }
+
 .content{
     width: 1200px;
     height: auto;
@@ -119,6 +119,8 @@ ul li  :hover{
     color: #2ae919;
     font-size: 60px;
 }
+  
+
 .form{
     width: 250px;
     height: 380;
@@ -151,49 +153,15 @@ ul li  :hover{
 .button:hover{
     color: #0d1908;
 }
+ 
+ /* FAQ page */
 .faq-container-heading{
  color: #2ae919;
  margin-top: 100px;
  margin-bottom: 50px;
  text-align: center;
 }
-.faq-container {
-        max-width: auto;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-    }
-    
-.faq-question {
-        margin-left:350px;
-        margin-bottom: 20px;
-        max-width: 800px;
-        cursor: pointer;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        position: relative; 
-    }
-    
-.faq-question::after {
-        content: "\25BE"; 
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-.faq-answer {
-        display: none;
-        padding-top: 10px;
-        font-size: 20px;
-    }
-    
-   
-    .faq-question.active .faq-answer {
-        display: block;
-    }
+
   
 .faq-container {
     max-width: 800px;
@@ -203,7 +171,9 @@ ul li  :hover{
 }
 
 .faq-question {
+    margin-left:350px;
     margin-bottom: 20px;
+    max-width: 800px;
     cursor: pointer;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -212,23 +182,9 @@ ul li  :hover{
     position: relative; 
 }
 
-.faq-question::after {
-    content: "\25BE"; 
-    position: absolute;
-    right: 10px;
-    top: 50%; 
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
 .faq-answer {
     display: none;
     padding-top: 10px;
-}
-
-
-.faq-question.active .faq-answer {
-    display: block;
 }
 .faq-container {
     max-width: 800px;
@@ -236,7 +192,6 @@ ul li  :hover{
     padding: 20px;
     text-align: center;
 }
-
 
 .faq-question::after {
     content: "\25BE";
@@ -247,18 +202,12 @@ ul li  :hover{
     cursor: pointer; 
 }
 
-.faq-answer {
-    display: none;
-    padding-top: 10px;
-}
-
 .faq-question.active .faq-answer {
     display: block;
 }
 
+
 /* About page */
-
-
 
 .about .heading h1{
     color: #2ae919;
@@ -326,6 +275,118 @@ ul li  :hover{
 .btn_about:hover{
     color: #0d1908;
 }
+/* End About */
+
+/* Patient */
+.patient .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+
+.patient .content {
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px; 
+    border-radius: 10px; }
+
+.patient .heading h1,.disease h2 {
+    color: #2ae919;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.patient .content p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #000; 
+}
+
+.patient .image {
+    flex: 1;
+    width: 600px;
+    margin: auto;
+}
+
+.patient img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.patient .btn_about {
+    background-color: #2ae919;
+    color: rgb(236, 232, 232);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.patient .btn_about a {
+    text-decoration: none;
+    color: white;
+}
+
+.patient .btn_about:hover {
+    color: #0d1908;
+}
+/* Center content in the "disease" div */
+.disease {
+    text-align: center;
+    background-color: rgb(72, 93, 67);
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.disease-search {
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Align items vertically in the center */
+}
+label {
+    margin-right: 10px;
+    color: #fff;
+    font-size:20px;
+    
+}
+#disease-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.disease #search-button {
+    background-color: #2ae919;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.disease #search-button:hover {
+    background-color: #0d1908;
+}
+
+
 /* Contact us page */
 .contactus{
     position: relative;
@@ -473,6 +534,8 @@ color: #fff;
     }
 }
 
+/* Contact us End */
+
 /* practitioner */
 
 
@@ -483,27 +546,22 @@ color: #fff;
     line-height: 1.6;
 }
 
- header {
-    background-color: #2ae919;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
 
- h1 {
+
+.practitioner h1 {
     font-size: 32px;
 }
 
- h2 {
+.practitioner h2 {
     font-size: 24px;
     color: #2ae919;
 }
 
- p {
+.practitioner p {
     margin-bottom: 20px;
 }
 
-section {
+.practitioner section {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -619,3 +677,279 @@ section {
     }
    
 }
+
+ 
+
+/* Dosha Prediction page */
+.dosha {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.dosha .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dosha h1 {
+    text-align: center;
+    color: #333;
+}
+
+.dosha select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.dosha .column {
+    width: 50%;
+    float: left; 
+    box-sizing: border-box; 
+    padding: 10px;
+}
+.dosha::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.dosha button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #2ae919;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.dosha button:hover {
+    background-color: #096700;
+}
+
+/* learn page */
+.timeline .container{
+    margin: 0px;
+    padding: 0;
+    font-family: 'poppins' , sans-serif;
+    box-sizing: border-box;
+}
+ .learn-page-title {
+    margin: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:rgb(21, 19, 19);
+    font-family: Arial;
+    font-size: 40px;
+
+}
+body{
+    background-color: #bce3b9;
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin:100px auto;
+}
+.timeline .container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.timeline .container:nth-child(1){
+    animation-delay: 0S;
+}
+.timeline .container:nth-child(2){
+    animation-delay: 1S;
+}
+.timeline .container:nth-child(3){
+    animation-delay: 2S;
+}
+.timeline .container:nth-child(4){
+    animation-delay: 3S;
+}
+.timeline .container:nth-child(5){
+    animation-delay: 4S;
+}
+
+.timeline .texbox{
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font: size 15px;
+
+}
+.timeline .left-container{
+    left: 0;
+}
+.timeline .right-container{
+    left: 50%;
+}
+.timeline .container img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+     
+}
+.timeline .right-container img{
+    left: -20px;
+
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.timeline .texbox h2{
+    font-weight: 600;
+}
+.timeline .texbox small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.timeline .left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+.timeline .right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+@media screen and (max-width:600px){
+    
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left:31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .textbox{
+        font-size: 13px;
+    }
+    .texbox small{
+        margin-bottom: 10px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container img, .right-container img {
+        left: 10px;
+    }
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+}
+/* learn page end */
+/*  Disease Result */
+
+.result .box-container {
+    width: 300px; 
+    height: 50px; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+    line-height: 50px; 
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+.result .box-text {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: black; 
+    margin: 0; 
+}
+
+.center-button {
+    text-align: center; 
+}
+
+.result .button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block; 
+    background-color: #2ae919;
+    color: rgb(236, 232, 232);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #096700;
+}
+/*  Disease Result End */
